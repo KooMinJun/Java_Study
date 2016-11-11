@@ -11,12 +11,12 @@ public class BankAccount {
 		balance -= amount ;
 	}
 	
-	public void add(int money){
+	public synchronized void add(int money){
 		balance += money;
 		System.out.println("총합  : " + balance + ", " + money + "만큼 입금");
 	}
 	
-	public void delete(int money){
+	public synchronized void delete(int money){
 		balance -= money;
 		System.out.println("총합 : " + balance + ", " + money + "만큼 출금");
 	}
