@@ -9,7 +9,7 @@ public class testMain {
 		Thread depositMan = new Thread(){
 			public void run(){
 				for(int i = 0; i< 10; i++){
-					account.add(10);
+					account.Deposit(10);
 					try{
 						Thread.sleep((int)(Math.random() * 1000));
 					}catch (Exception e) {
@@ -23,7 +23,7 @@ public class testMain {
 		Thread withdrawMan = new Thread(){
 			public void run(){
 				for(int i=0 ; i<10 ; i++){
-					account.delete(10);
+					account.Withdraw(10);
 					try{
 						Thread.sleep((int)(Math.random() * 1000));
 					}catch (Exception e) {

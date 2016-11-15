@@ -7,16 +7,13 @@ public class BankAccount {
 		return balance;
 	}
 	
-	public void withDraw(int amount){
-		balance -= amount ;
-	}
 	
-	public synchronized void add(int money){
+	public synchronized void Deposit(int money){
 		balance += money;
 		System.out.println("총합  : " + balance + ", " + money + "만큼 입금");
 	}
 	
-	public synchronized void delete(int money){
+	public synchronized void Withdraw(int money){
 		balance -= money;
 		System.out.println("총합 : " + balance + ", " + money + "만큼 출금");
 	}
